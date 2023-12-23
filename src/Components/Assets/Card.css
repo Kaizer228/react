@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&family=Mountains+of+Christmas:wght@400;700&family=Oswald:wght@500&family=Poppins:ital,wght@0,400;0,700;1,300&family=Raleway:wght@500&family=Roboto+Slab:wght@200;500&family=Roboto:wght@300&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+.Card {
+  background: rgb(18, 16, 16);
+  border-radius: 20px;
+  height: 750px;
+  border-radius: 10px;
+  transition: box-shadow 0.32s ease-in-out;
+}
+@media screen and (max-width: 700px) {
+  .Header{
+    width: 100%;
+  }
+  .Card {
+    background: rgb(18, 16, 16);
+    border-radius: 20px;
+    height: 700px;
+    width: 270px;
+    transition: box-shadow 0.32s ease-in-out;
+  }
+    
+}
+.Card:hover {
+  background-color: #006a4e;
+}
+
+.Img {
+  width: 70%;
+  background-color: rgb(55, 52, 52);
+  border-radius: 120px;
+  margin: 10px auto auto auto;
+  display: flex;
+  align-items: center;
+}
+.Name {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 13px;
+}
+.Level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-top: 13px;
+}
+.Description {
+  padding: 20px;
+  margin-top: 13px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.Stars {
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+.star {
+  color: #ffd700;
+  font-size: 20px;
+}
+
+.button {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto auto auto;
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: #d45e0f;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 11px;
+  transition: all 0.5s ease;
+}
+
+button:hover {
+  letter-spacing: 3px;
+  background-color: #006a4e;
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(34, 220, 24) 0px 7px 29px 0px;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: #d45e0f;
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(34, 220, 24) 0px 7px 29px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.A-tag {
+  text-decoration: none;
+  background-color: white;
+}

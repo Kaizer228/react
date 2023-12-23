@@ -1,0 +1,225 @@
+.Header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #006a4e;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: #d45e0f;
+}
+nav {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+}
+
+.ul-links {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  margin-right: 90px;
+  margin-top: 15px;
+  color: white;
+}
+.link:hover {
+  color: #d45e0f;
+}
+.logo {
+  display: flex;
+  transform: translateX(-70px);
+  justify-content: center;
+  margin: auto;
+  width: 180px;
+  height: 90px;
+}
+
+@media (min-width: 100px) and (max-width: 900px) {
+  .link {
+    display: none;
+  }
+}
+
+#menuToggle {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+
+  z-index: 1;
+
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -20px;
+  left: -5px;
+
+  cursor: pointer;
+
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  top: -20px;
+  left: -5px;
+  background: #cdcdcd;
+  border-radius: 3px;
+
+  z-index: 1;
+
+  transform-origin: 4px 0px;
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -160px;
+  background-color: #006a4e;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #menu {
+    transform: none;
+    opacity: 0;
+
+    transition: opacity 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -20px;
+    left: 95px;
+
+    cursor: pointer;
+
+    opacity: 0;
+    z-index: 2;
+
+    -webkit-touch-callout: none;
+  }
+
+  #menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    top: -20px;
+    left: 95px;
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  #menuToggle {
+    display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .logo {
+    display: flex;
+    transform: translateX(-65px);
+    justify-content: center;
+    margin: auto;
+    width: 180px;
+    height: 90px;
+  }
+  .Header {
+    margin: 0;
+    padding: 0;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #006a4e;
+  }
+  .logo {
+    display: flex;
+    transform: translateX(-85px);
+    justify-content: center;
+    margin: auto;
+    width: 180px;
+    height: 90px;
+  }
+    
+}
